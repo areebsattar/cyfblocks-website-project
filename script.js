@@ -52,15 +52,17 @@ document.getElementById('hamb').addEventListener('click', (event) => {
 
 document.getElementById('next').addEventListener('click', (event) => {
   images.push(images[0]);
+  images.shift();
   let element_image = document.getElementById('image');
-  element_image.setAttribute("src", images.shift());
+  element_image.setAttribute("src", images[0]);
 
 });
 
 document.getElementById('prev').addEventListener('click', (event) => {
   images.unshift(images.slice(-1)[0]);
+  images.pop();
   let element_image2 = document.getElementById('image');
-  element_image2.setAttribute("src", images.pop());
+  element_image2.setAttribute("src", images[0]);
 
 });
 
